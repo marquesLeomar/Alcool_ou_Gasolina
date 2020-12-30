@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="#FFFFFF"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/txtResposta2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Resultado para seu carro economizar"
+            android:textColor="@color/corAlcool"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btCalcular" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="416dp"
+            android:layout_height="129dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo2" />
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="426dp"
+            android:layout_height="102dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-4389621952707823/4463032268"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtResposta2"></com.google.android.gms.ads.AdView>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="333dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:srcCompat="@drawable/central" />
+
+        <Button
+            android:id="@+id/btCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_marginTop="16dp"
+
+
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/btn"
+            android:onClick="calcularValor"
+            android:text="Calcular"
+            android:textColor="@android:color/primary_text_dark_nodisable"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editGasolina" />
+
+        <EditText
+            android:id="@+id/editGasolina"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="125dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="125dp"
+            android:layout_marginRight="125dp"
+            android:background="@color/browser_actions_bg_grey"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:textColor="#A61717"
+            android:textColorHighlight="#191717"
+            android:textColorHint="#A82F2F"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEtanol" />
+
+        <EditText
+            android:id="@+id/editEtanol"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="125dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="125dp"
+            android:layout_marginRight="125dp"
+            android:background="@color/browser_actions_bg_grey"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:textColor="@color/browser_actions_text_color"
+            android:textColorHighlight="#191717"
+            android:textColorHint="@color/corAlcool"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="243dp"
+            android:layout_height="122dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:srcCompat="@drawable/ve2t" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preço do etanol"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FDFDFD"
+            android:textSize="27dp"
+            app:layout_constraintBottom_toTopOf="@+id/editEtanol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preço do etanol"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FDFDFD"
+            android:textSize="27dp"
+            app:layout_constraintBottom_toTopOf="@+id/editEtanol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preço da gasolina"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FDFDFD"
+            android:textSize="27dp"
+            app:layout_constraintBottom_toTopOf="@+id/editGasolina"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEtanol" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

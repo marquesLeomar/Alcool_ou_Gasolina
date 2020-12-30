@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6F657C</color>
+    <color name="colorPrimaryDark">#48464E</color>
+    <color name="colorAccent">#EC0B25</color>
+    <color name="fundo_app">#242724</color>
+    <color name="corGasolina">#A61717</color>
+    <color name="corAlcool">#31B337</color>
+</resources>
